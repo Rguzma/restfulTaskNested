@@ -1,0 +1,20 @@
+<p>Tasks</p>
+<button (click) = "getTasks()">Get tasks</button>
+
+<div *ngFor = "let varTasks of title">
+    <div>
+        <div>
+            Task title: {{varTasks.title}} 
+            <button (click)=getATask([varTasks._id]) >Show details</button>
+        </div>
+        <div>
+            
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<app-task-list *ngIf="singleTask._id" [singleTask]= "singleTask"> </app-task-list>
